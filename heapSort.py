@@ -36,3 +36,5 @@ for i in range(N):
 print arr
 heapSort(arr)
 print arr
+#print "Iteraciones: ",iteraciones[0]
+#print "Operaciones: ",operaciones[0]
