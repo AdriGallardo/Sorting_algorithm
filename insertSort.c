@@ -5,7 +5,7 @@
 
 #define N 10
 
-void insertSort(int arr[N])
+void insertSort(int arr[N],int iteraciones[1],int operaciones[1])
 {   int i,k,j,t;
     int arr2[N];
     for(i=0;i<N;i++)
@@ -14,6 +14,7 @@ void insertSort(int arr[N])
 
     for(i=1;i<N;i++)
     {   k=0;
+        iteraciones[0]=iteraciones[0]+1;
         for(j=0;j<i;j++)
         {   if(arr[i]<arr2[j])
             {  //insertar arr[i] en posicion j de arr2
@@ -24,6 +25,7 @@ void insertSort(int arr[N])
                 }
 
                 k=1;
+                operaciones[0]=operaciones[0]+1;
                 break;
             }
         }
@@ -38,7 +40,8 @@ void insertSort(int arr[N])
 }
 
 int main()
-{
+{   int iteraciones[1]={0};
+    int operaciones[1]={0};
     int arr[N]={0};
     int i=0;
     int v=0;
@@ -55,6 +58,7 @@ int main()
         printf("%i ",arr[i]);
     }
     printf("\n");
-    insertSort(arr);
-
+    insertSort(arr,iteraciones,operaciones);
+    printf("\nIteraciones: %i",iteraciones[0]);
+    printf("\nOperaciones: %i",operaciones[0]);
 }
