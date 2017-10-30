@@ -3,7 +3,7 @@
 #include<time.h>
 #include<string.h>
 
-#define N 10
+#define N 100
 
 void printA(int *arr, int n)
 {
